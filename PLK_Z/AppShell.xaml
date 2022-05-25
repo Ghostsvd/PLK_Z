@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NumbersApi.AppShell"
+       xmlns:views="clr-namespace:NumbersApi.Views">
+
+    <TabBar>
+        <ShellContent Title="Записи" ContentTemplate="{DataTemplate views:NotesPage}"/>
+    </TabBar>
+    
+</Shell>

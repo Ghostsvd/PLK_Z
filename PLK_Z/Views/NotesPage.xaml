@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NumbersApi.Views.NotesPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить"
+                     Clicked="AddButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <CollectionView x:Name="collectionView" SelectionMode="Single" Margin="20" SelectionChanged="OnSelectionChanged">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    
+                    <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                    <Label Grid.Column="1" Text="{Binding Text}" TextColor="Black"/>
+                    <Label Grid.Column="2" Text="{Binding Fact}" TextColor="Black"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
